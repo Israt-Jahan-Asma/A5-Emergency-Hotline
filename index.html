@@ -12,28 +12,43 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- font cdn -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
-<!-- navbar  -->
- 
+    <header class="w-full flex justify-between py-6 border-2 border-amber-600">
+        <!-- logo div  -->
+        <div class="flex gap-1 justify-center items-center">
+            <img class="w-[50px] h-[50px]" src="assets/logo.png" alt="">
+            <h1 class="font-bold text-[16px] font-[Hind Madurai] leading-[20px] text-[#006747]">Emergency <br>Service</h1>
+        </div>
+        <!-- right side div  -->
+        <div class="flex justify-between gap-5 items-center">
+            <!-- heart div  -->
+            <div class="flex justify-between gap-1 bg-[#41ff6b1a] py-3 px-8 rounded-[50px]">
+                <span class="font-bold">0</span>
+                <img class="w-[25px] h-[25px]" src="assets/heart.png" alt="">
+            </div>
+            <!-- coin div  -->
+            <div class="flex justify-between gap-1 bg-[#41ff6b1a] py-3 px-8 rounded-[50px]">
+                <span class="font-bold">100</span>
+                <img class="w-[25px] h-[25px]" src="assets/coin.png" alt="">
+            </div>
+            <!-- copy button  -->
+            <div class="flex justify-between gap-1 bg-[#00A63E] py-3 px-8 rounded-[50px]">
+                <h2 class="text-white"> <span>0 </span>Copy</h2>
+            </div>
+        </div>
 
-<div class="navbar bg-base-100 shadow-sm">
-  <div class="navbar-start">
-    <img class="" src="assets/logo.png" alt="">
-  </div>
-  <div class="navbar-center hidden lg:flex">
-    
-  </div>
-  <div class="navbar-end">
-    <a class="btn">Button</a>
-  </div>
-</div>
-<div> checking git commit working</div>
+    </header>
+
+
+
 </body>
 
 </html>
