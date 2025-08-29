@@ -72,3 +72,31 @@ clearButton.addEventListener('click', function () {
     callHistoryData.length = 0;
     callHistoryContainer.innerHTML = "";
 })
+
+const copyButtons = document.querySelectorAll('.copy-button');
+
+for (let i = 0; i < copyButtons.length; i++) {
+    copyButtons[i].addEventListener('click', function() {
+
+        // Get the parent card of the clicked button
+        const card = copyButtons[i].closest('.card');
+
+        // Get the text from the existing class 'service-number'
+        const textToCopy = card.querySelector('.service-number').innerText;
+
+        // Create a temporary input to copy text
+        const tempInput = document.createElement('input');
+        tempInput.value = textToCopy;
+        document.body.appendChild(tempInput);
+
+        // Select and copy the text
+        tempInput.select();
+        document.execCommand('copy');
+
+        // Remove the temporary input
+        document.body.removeChild(tempInput);
+
+        // Optional: Show alert
+        alert("Copied: " + textToCopy);
+    });
+}
