@@ -13,7 +13,6 @@ for (let i = 0; i < heartButtons.length; i++) {
     });
 }
 
-
 const callButtons = document.querySelectorAll('.call-button')
 for (let i = 0; i < callButtons.length; i++) {
     callButtons[i].addEventListener('click', function () {
@@ -73,6 +72,9 @@ clearButton.addEventListener('click', function () {
     callHistoryContainer.innerHTML = "";
 })
 
+
+// Challenges Part 
+const copyCountSpan = document.getElementById('copy-count');
 const copyButtons = document.querySelectorAll('.copy-button');
 
 for (let i = 0; i < copyButtons.length; i++) {
@@ -84,19 +86,20 @@ for (let i = 0; i < copyButtons.length; i++) {
         // Get the text from the existing class 'service-number'
         const textToCopy = card.querySelector('.service-number').innerText;
 
-        // Create a temporary input to copy text
         const tempInput = document.createElement('input');
         tempInput.value = textToCopy;
         document.body.appendChild(tempInput);
 
-        // Select and copy the text
         tempInput.select();
         document.execCommand('copy');
 
-        // Remove the temporary input
+
         document.body.removeChild(tempInput);
 
-        // Optional: Show alert
         alert("Copied: " + textToCopy);
+
+        let currentCount = parseInt(copyCountSpan.innerText);
+        currentCount++;
+        copyCountSpan.innerText = currentCount;
     });
 }
