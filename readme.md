@@ -24,6 +24,5 @@ Ans: Event delegation is a technique in JavaScript where you attach a single eve
 
 5. What is the difference between **preventDefault() and stopPropagation()** methods?
 Ans: event.preventDefault() - Prevents the default behavior of an element. Does NOT stop the event from bubbling up the DOM. Used when you want the event to happen, but not its default action.
-
 event.stopPropagation() - Stops the event from bubbling (or capturing) further in the DOM tree. Does NOT prevent the default behavior. Used when you want the event to be handled only on the current target, not parents.
 ---
