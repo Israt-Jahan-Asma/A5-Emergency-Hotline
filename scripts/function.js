@@ -96,7 +96,7 @@ for (let i = 0; i < copyButtons.length; i++) {
 
         document.body.removeChild(tempInput);
 
-        alert("Copied: " + textToCopy);
+        alert("Number Copied: " + textToCopy);
 
         let currentCount = parseInt(copyCountSpan.innerText);
         currentCount++;
