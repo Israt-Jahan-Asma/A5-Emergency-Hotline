@@ -39,7 +39,7 @@ for (let i = 0; i < callButtons.length; i++) {
         // Add this service into the Call History section with
         const data = {
             serviceName: serviceName,
-            serviceNumber:  serviceNumber,
+            serviceNumber: serviceNumber,
             time: new Date().toLocaleTimeString()
         }
 
@@ -59,5 +59,16 @@ for (let i = 0; i < callButtons.length; i++) {
             </div>
         `
         callHistoryContainer.appendChild(div);
+
     })
+
 }
+// Clicking this button will remove all data from call history
+
+const clearButton = document.getElementById('clear-history')
+const callHistoryContainer = document.getElementById('call-history-container')
+
+clearButton.addEventListener('click', function () {
+    callHistoryData.length = 0;
+    callHistoryContainer.innerHTML = "";
+})
